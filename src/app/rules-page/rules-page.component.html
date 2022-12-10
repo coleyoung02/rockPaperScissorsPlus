@@ -1,0 +1,39 @@
+<div id = "Rules" class="container-fluid d-flex flex-column " style="min-height: 100vh"> <!-- This is Rules Page-->
+  <div class = "container-fluid d-flex flex-column text-center"> <!-- Title -->
+    <p class="display-1">Rules</p>
+  </div>
+
+  <div class="d-flex flex-wrap flex-row align-items-center justify-content-center ">
+
+    <div class="d-flex flex-column align-items-center justify-content-center half " style="padding: 3vh">
+      <div class="d-flex flex-row">
+        <button id="left" type="button" class="btn btn-secondary btn-lg">Home Screen</button>
+        <div class="eighth"></div>
+        <button id="right" type="button" class="btn btn-secondary btn-lg">Start Game</button> 
+      </div>
+      <app-handtracker #handtracker (onPrediction)="prediction($event)"></app-handtracker>
+      <div [innerHTML]="gesture"></div>
+      
+    </div>
+
+    <div class="d-flex flex-column  half p-3" style="padding: 3vh; background-color: transparent;">
+      <h4>Navigation Controls:</h4>
+      <ul>Highlight Button on Left (Left hand open, Right hand pointing)</ul>
+      <ul>Highlight Button on Right (Left hand pointing, Right hand open)</ul>
+      <ul>Select Button (One hand open, One hand closed)</ul>
+      <br>
+      <h4>Game Options:</h4>
+      <ul>Rock (One closed hand) - Beats Scissors and Water</ul>
+      <ul>Paper (One open hand) - Beats Rock and Cannon</ul>
+      <ul>Scissors (One pointing hand) - Beats Paper and Water</ul>
+      <ul>Cannon (Two closed hands) - Beats Rock and Scissors</ul>
+      <ul>Water (Two open hands) - Beats Paper and Cannon</ul>
+      <br>
+      <h4>How to Play:</h4>
+      <ul>After starting the game, the player should choose one of the game options listed above.</ul>
+      <ul>To lock in their choice, the player must hold this option for 5 seconds, shown at the top.</ul>
+      <ul>After the 5 seconds are up, the computer will make a play as well. The game results will update.</ul>
+      <ul>Try your best to choose the game option that will beat the computer!</ul></div></div></div>
+
+
+    

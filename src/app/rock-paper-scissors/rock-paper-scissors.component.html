@@ -1,0 +1,27 @@
+
+<div class="d-flex flex-row justify-content-center half p-3" style="padding: 3vh; background-color: lightcoral;">
+    <h2>{{timeLeft}}</h2>
+</div>
+<div class="d-flex flex-row justify-content-center half p-3" style="padding: 3vh; background-color: transparent;">
+    <div class="d-flex flex-column align-items-center justify-content-center half">
+        <p>MY MOVE</p>
+        <img *ngIf="activeMoveImg != undefined" [src]="activeMoveImg" [alt]="activeMoveAlt" style = "width: 20vw; height: auto;">
+    </div>
+    <div class="d-flex flex-column align-items-center justify-content-center quarter">
+        
+    </div>
+    <div class="d-flex flex-column align-items-center justify-content-center half">
+        <p>CPU MOVE</p>
+        <img *ngIf="computerMoveImg != undefined" [src]="computerMoveImg" [alt]="computerMoveAlt" style = "width: 20vw; height: auto;">
+    </div>
+</div>
+<div class="d-flex flex-column justify-content-center half p-3" style="padding: 3vh; background-color: aquamarine;">
+    <h2>Wins: {{wins}}</h2>
+    <h2>Ties: {{ties}}</h2>
+    <h2>Losses: {{losses}}</h2>
+</div>
+
+    
+
+<!-- this component right now is just the placeholder plus something to test if the component was actually getting an updated sign-->
+<!-- this component goes into the game page-->

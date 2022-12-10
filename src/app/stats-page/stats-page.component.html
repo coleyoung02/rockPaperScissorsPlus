@@ -1,0 +1,43 @@
+<div id="Stats" class="container-fluid"> <!-- This is Stats Page-->
+  <div class="row"> <!-- Title -->
+    <p class="display-1 green">Stats</p>
+  </div>
+
+  <div class="row"> 
+    <div class="col-1">
+      <button id="left" type="button" class="btn btn-secondary btn-lg">Home Screen</button>
+    </div>
+    <div class="col-1">
+      <button id="right" type="button" class="btn btn-secondary btn-lg">Start Game</button>    
+    </div>
+    <div class="col-10">    
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-3">
+      <app-handtracker #handtracker (onPrediction)="prediction($event)"></app-handtracker>
+      <div [innerHTML]="gesture"></div>
+    </div>
+    
+    <div class="col-5">
+      <p *ngIf="gamesPlayed > 0">You have won {{winPct}}, lost {{lossPct}}, and tied {{tiePct}} of your games.</p>
+      <p>You have played {{gamesPlayed}} games.</p>
+      <p>You have played rock {{timesRockUsed}} times.</p>
+      <p>You have played paper {{timesPaperUsed}} times.</p>
+      <p>You have played scissors {{timesScissorsUsed}} times.</p>
+      <p>You have played cannon {{timesCannonUsed}} times.</p>
+      <p>You have played water {{timesWaterUsed}} times.</p>
+    </div>
+    <div class="col-4">
+      <div class="row">
+        <canvas id="MyChart1" >{{ chart1 }}</canvas>
+      </div>
+      <div class="row">
+        <canvas id="MyChart2" >{{ chart2 }}</canvas>
+      </div>
+    </div>
+  </div>
+    
+</div>
+<!-- this is the component for the stats page, as all other page components, it has a handtracker for navigation-->

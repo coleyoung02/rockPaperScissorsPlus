@@ -1,0 +1,20 @@
+<div id = "Home" class="container-fluid d-flex flex-column " style="min-height: 100vh"> <!-- This is Home Page-->
+  <div class = "container-fluid d-flex flex-column text-center"> <!-- Title -->
+    <p class="display-1">Rock Paper Scissors+</p>
+  </div>
+
+  <div class="d-flex flex-wrap flex-row align-items-center justify-content-center ">
+
+    <div class="d-flex flex-column align-items-center justify-content-center half " style="padding: 3vh">
+      <app-handtracker #handtracker (onPrediction)="prediction($event)"></app-handtracker>
+      <div [innerHTML]="gesture"></div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center justify-content-center half p-3" style="padding: 3vh">
+      <button id="left" type="button" class="btn btn-secondary btn-lg">Start Game</button>
+      <div class="eighth"></div>
+      <button id="right" type="button" class="btn btn-secondary btn-lg">Game Rules</button> 
+    </div>
+  </div>
+    
+</div>

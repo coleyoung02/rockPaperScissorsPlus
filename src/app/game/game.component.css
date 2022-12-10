@@ -1,0 +1,12 @@
+.half{
+    width: 50%;
+    min-width: 400px;
+}
+
+.quarter{
+    width: 25%;
+}
+
+.eighth{
+    width: 12.5%;
+}
